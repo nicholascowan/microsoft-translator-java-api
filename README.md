@@ -25,9 +25,8 @@ Download the latest [JAR with Dependencies](https://microsoft-translator-java-ap
 
     public class Main {
       public static void main(String[] args) throws Exception {
-        // Set your Windows Azure Marketplace client info - See http://msdn.microsoft.com/en-us/library/hh454950.aspx
-        Translate.setClientId(/* Enter your Windows Azure Client Id here */);
-        Translate.setClientSecret(/* Enter your Windows Azure Client Secret here */);
+        // Set your Azure Portal Subscription - See https://www.microsoft.com/cognitive-services/en-us/translator-api/documentation/TranslatorInfo/overview
+        Translate.setSubscriptionKey(/* Enter your Windows Azure Subscription Key here */);
 
         String translatedText = Translate.execute("Bonjour le monde", Language.FRENCH, Language.ENGLISH);
 

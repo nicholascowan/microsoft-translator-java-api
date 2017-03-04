@@ -49,7 +49,7 @@ Build JAR
 =====
 There is a ready jar file you can just download (https://github.com/firemaples/microsoft-translator-java-api/blob/master/microsoft-translator-java-api-0.8.0.jar) , or
  you can build it by yourself:
- 1. Download this project and run the command in the lib folder
+1. Download this project and run the command in the lib folder
 
 >    gradle jar
 

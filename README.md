@@ -18,7 +18,7 @@ _Please note: If you signed up for a Bing Developer Key after March 31, 2012, yo
 Quickstart
 ===========
 
-Download the latest [JAR with Dependencies](https://microsoft-translator-java-api.googlecode.com/files/microsoft-translator-java-api-0.6.2-jar-with-dependencies.jar)
+Download the latest [JAR without dependencies](https://github.com/firemaples/microsoft-translator-java-api/blob/master/microsoft-translator-java-api-0.8.0.jar)
 
     import com.memetix.mst.language.Language;
     import com.memetix.mst.translate.Translate;
@@ -45,34 +45,17 @@ I've posted some examples to the [SVN repository](http://code.google.com/p/micro
   * [Generating and playing a WAV of given text spoken in a chosen dialect](http://code.google.com/p/microsoft-translator-java-api/source/browse/trunk/microsoft-translator-java-examples/src/main/java/com/memetix/mst/examples/SpeakTextExample.java)
   * [Bulk translation using the TranslateArray service](http://code.google.com/p/microsoft-translator-java-api/source/browse/trunk/microsoft-translator-java-examples/src/main/java/com/memetix/mst/examples/TranslateArrayExample.java)
 
-Maven
+Build JAR
 =====
+There is a ready jar file you can just download (https://github.com/firemaples/microsoft-translator-java-api/blob/master/microsoft-translator-java-api-0.8.0.jar) , or
+ you can build it by yourself:
+ 1. Download this project and run the command in the lib folder
 
-For those using Maven 2 to manage their project dependencies, the microsoft-translator-java-api is distributed via the [Maven Central](http://search.maven.org/#browse%7C458759702) repository. Simply include the following in your POM.xml to use the Microsoft Translator Java API:
+>    gradle jar
 
-    <dependency>
-        <groupId>com.memetix</groupId>
-        <artifactId>microsoft-translator-java-api</artifactId>
-        <version>0.6.2</version>
-        <type>jar</type>
-    </dependency>
+2. After the command running finished, yur will found the output jar file in the path:
 
-Or, if you're feeling adventurous, help us test the next version by adding the latest SNAPSHOT to your POM.xml:
-
-    <dependency>
-        <groupId>com.memetix</groupId>
-        <artifactId>microsoft-translator-java-api</artifactId>
-        <version>0.7-SNAPSHOT</version>
-        <type>jar</type>
-    </dependency>
-
-The SNAPSHOT is hosted at the [Sonatype OSS Snapshot](https://oss.sonatype.org/content/repositories/snapshots/) repository, so if you do not already have it in your repository list, you will need to add this also
-
-    <repository>
-        <id>sonatype-oss-repo</id>
-        <name>Sonatype Open Source maven snapshot repo</name>
-        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </repository>
+>    lib/build/libs/lib.jar
 
 License
 =======

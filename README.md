@@ -11,7 +11,7 @@ is my goal to mimic the code structure, naming conventions, functionality, and u
 ## Requires
 
 * Java 1.5 or greater
-* A Windows Azure Marketplace Client ID and Client Secret - [Documentation](http://msdn.microsoft.com/en-us/library/hh454950.aspx)
+* A Windows Azure Portal Subscription - [Documentation](https://www.microsoft.com/cognitive-services/en-us/translator-api/documentation/TranslatorInfo/overview)
                                                           
 _Please note: If you signed up for a Bing Developer Key after March 31, 2012, you will not be able to use your App Id with this API. Please visit the aforementioned documentation link_
 

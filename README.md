@@ -18,7 +18,7 @@ _Please note: If you signed up for a Bing Developer Key after March 31, 2012, yo
 Quickstart
 ===========
 
-Download the latest [JAR without dependencies](https://github.com/firemaples/microsoft-translator-java-api/blob/master/microsoft-translator-java-api-0.8.0.jar)
+Download the latest [JAR with dependencies](https://github.com/firemaples/microsoft-translator-java-api/blob/master/microsoft-translator-java-api-0.8.0-with-dependencies.jar)
 
     import com.memetix.mst.language.Language;
     import com.memetix.mst.translate.Translate;
@@ -47,16 +47,16 @@ I've posted some examples to the [SVN repository](http://code.google.com/p/micro
 
 Build JAR
 =====
-There is a ready jar file you can just download (https://github.com/firemaples/microsoft-translator-java-api/blob/master/microsoft-translator-java-api-0.8.0.jar) , or
+There is a ready jar file you can just download (https://github.com/firemaples/microsoft-translator-java-api/blob/master/microsoft-translator-java-api-0.8.0-with-dependencies.jar) , or
  you can build it by yourself:
 
 Download this project and run the command in the lib folder
 
->    gradle jar
+>    gradle fatJar
 
 After the command running finished, yur will found the output jar file in the path:
 
->    lib/build/libs/lib.jar
+>    lib/build/libs/lib-with-dependencies.jar
 
 License
 =======

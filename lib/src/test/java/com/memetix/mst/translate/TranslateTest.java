@@ -59,16 +59,14 @@ public class TranslateTest{
             clientSecret = System.getProperty("test.api.key").split(",")[2];
         }
         Translate.setKey(apiKey);
-        Translate.setClientSecret(clientSecret);
-        Translate.setClientId(clientId);
+
     }
     
     @After
     public void tearDown() throws Exception {
         Translate.setKey(null);
         Translate.setContentType("text/plain");
-        Translate.setClientId(null);
-        Translate.setClientSecret(null);
+
         Translate.setHttpReferrer(null);
     }
 
@@ -162,8 +160,6 @@ public class TranslateTest{
     @Test
      public void testTranslate_NoKey() throws Exception {
         Translate.setKey(null);
-        Translate.setClientId(null);
-        Translate.setClientSecret(null);
         exception.expect(RuntimeException.class);
         exception.expectMessage("Must provide a Windows Azure Marketplace Client Id and Client Secret - Please see http://msdn.microsoft.com/en-us/library/hh454950.aspx for further documentation");
         Translate.execute("ハローワールド", Language.AUTO_DETECT, Language.ENGLISH);
@@ -171,8 +167,6 @@ public class TranslateTest{
     @Test
      public void testTranslate_WrongKey() throws Exception {
         Translate.setKey("lessthan16");
-        Translate.setClientId(null);
-        Translate.setClientSecret(null);
         exception.expect(RuntimeException.class);
         exception.expectMessage("INVALID_API_KEY - Please set the API Key with your Bing Developer's Key");
         Translate.execute("ハローワールド", Language.AUTO_DETECT, Language.ENGLISH);
@@ -180,8 +174,6 @@ public class TranslateTest{
     
     @Test
      public void testTranslate_SetKeyNoClientIdAndSecret() throws Exception {
-        Translate.setClientId(null);
-        Translate.setClientSecret(null);
         String translate = Translate.execute("ハローワールド", Language.AUTO_DETECT, Language.ENGLISH);
         assertNotNull(translate);
     }
